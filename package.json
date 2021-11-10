@@ -12,6 +12,6 @@
   },
   "scripts": {
     "test": "jest --watch --verbose",
-    "verify": "jest"
+    "verify": "jest --verbose"
   }
 }
