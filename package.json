@@ -1,0 +1,17 @@
+{
+  "name": "kata-typescript",
+  "version": "1.0.0",
+  "description": "Kata to learn typescript basics",
+  "main": "index.js",
+  "author": "Kelig Martin <martin.kelig@gmail.com>",
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.1",
+    "typescript": "^4.1.2"
+  },
+  "scripts": {
+    "test": "jest --watch",
+    "verify": "jest --coverage"
+  }
+}
