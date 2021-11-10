@@ -1,12 +1,13 @@
 export default class MyCalculator {
 
   // Coder une methode add qui prend 2 nombres en paramètre et renvoie la somme des deux
-  add($a: number, $b: number): number {
-    return $a + $b;
+  add(a: number, b: number): number {
+    return a + b;
   }
 
   // Coder une methode subtract qui prend 2 nombres en paramètre et renvoie la différence des deux
-  subtract() {
+  subtract(a: number, b: number): number {
+    return a - b;
   }
 
   // Coder une methode multiply qui prend 2 nombres en paramètre et renvoie le produit des deux
