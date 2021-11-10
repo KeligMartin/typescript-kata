@@ -17,9 +17,9 @@ export default class MyArray {
 
   }
 
-  // Coder une méthode optionalArray qui renvoie true si les 2 arrays passés en paramètres sont égaux, false sinon
+  // Coder une méthode optionalArray qui renvoie true si les 2 arrays d'entiers passés en paramètres sont égaux, false sinon
   // Faire de même avec un 3e tableau passé en paramètre qui sera optionnel
-  optionalArray(arr: number[], arr2: number[], arr3?: number[]) {
+  optionalArray() {
 
   }
 }
