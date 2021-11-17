@@ -1,6 +1,6 @@
 import MyCalculator from "../src/calculator";
 
-describe("calculator", () => {
+describe("Calculator", () => {
 
   let myCalculator: MyCalculator = new MyCalculator();
 

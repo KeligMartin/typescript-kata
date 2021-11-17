@@ -9,7 +9,6 @@ describe("hippopotamus", () => {
   let meat: Meat;
   let vegetable: Vegetable;
   let animal: Animal;
-  let animals: Array<Animal>
 
   beforeEach(() => {
     hippo = new Hippopotamus("roger", 150)
