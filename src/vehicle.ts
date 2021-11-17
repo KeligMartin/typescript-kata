@@ -14,19 +14,19 @@ export default class Vehicle {
   // bep bep si le vehicule est une moto
   // brrrrrrrrrrrrr si le vehicule est un camion
   // skrrrt skrrrt dans tout autre cas
-  noise(): string {
-    return "je dois faire du bruit"
+  noise() {
+    return undefined
   }
 
   // Coder un callback qui renverra la methode noise précedemment codée
   // mais transformera la valeur de retour en majuscule
-  myCb = (): string => {
-    return "je suis un callback"
+  myCb = () => {
+    return undefined
   }
 
   // Coder une méthode accelerate qui prend en paramètre un callback et renvoie la valeur de noise() concaténée au callback
-  accelerate(cb: () => string): string {
-    return "j'ai besoin d'un callback"
+  accelerate(cb: () => string) {
+    return undefined
   }
 
 

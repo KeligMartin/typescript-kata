@@ -3,7 +3,7 @@ import Meat from '../src/food/meat';
 import Vegetable from '../src/food/vegetable';
 import Animal from '../src/animal.class';
 
-describe("hippopotamus", () => {
+describe("Hippopotamus", () => {
 
   let hippo: Hippopotamus;
   let meat: Meat;
