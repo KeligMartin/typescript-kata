@@ -3,23 +3,81 @@ export default class MyArray {
   // Coder une méthode oddNumbers qui prend en paramètre un tableau d'entier, et renvoie un tableau uniquement composé
   // des entiers impairs de ce dernier
   oddNumbers(arr: number[]) {
-    return undefined
+
+    let arrBis: number[] = [];
+
+    for(let i = 0; i < arr.length ; i++){
+      if(arr[i] % 2 != 0){
+        arrBis.push(arr[i]);
+      }
+    }
+
+    return arrBis;
   }
 
   // Coder une méthode sort qui renvoie le tableau passé en paramètre trié par ordre croissant
   sort(arr: number[]) {
-    return undefined
+    let sortArray: number[] = [];
+    let swap: number;
+    let test: boolean = false;
+
+    while(!test){
+      let x = 0;
+      for(let i = 0; i < arr.length; i++){
+        if(arr[i] > arr[i + 1]){
+          swap = arr[i];
+          arr[i] = arr[i + 1];
+          arr[i + 1] = swap;
+          x++;
+        }
+      }
+
+      if(x == 0){
+        test = true;
+      }
+    }
+
+    return arr;
   }
 
   // Coder une méthode boringFunction qui renvoie true si les string du tableaux ont toutes la même longueur,
   // ou renvoie "relou ta fonction" sinon
   boringFunction(arr: string[]) {
-    return undefined
+    
+    for(let i = 0; i < arr.length-1; i ++){
+      if(arr[i].length != arr[i + 1].length){
+        return "relou ta fonction";
+      }
+    }
+    return true;
   }
 
   // Coder une méthode optionalArray qui renvoie true si les 2 arrays d'entiers passés en paramètres sont égaux, false sinon
   // Faire de même avec un 3e tableau passé en paramètre qui sera optionnel
-  optionalArray(a, b, c?) {
-    return undefined
+  optionalArray(a: number [], b: number [], c?: number []) {
+    
+    if(a.length != b.length){
+      return false;
+    }else{
+      for(let i = 0; i < a.length; i++){
+        if(a[i] != b[i]){
+          return false;
+        }
+      }
+    }
+
+    if(c != null){
+      
+      if(a.length != c.length){
+        return false;
+      }else{
+        for(let i = 0; i < c.length; i++){
+          if(a[i] != c[i]){
+            return false;
+          }
+        }
+      }
+    }
+    return true;
   }
 }
