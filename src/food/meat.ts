@@ -1,12 +1,11 @@
 import Food from './food';
 
 export default class Meat extends Food{
-
-  constructor(name: string) {
+  public constructor(name: string) {
     super(name);
   }
 
-  isVegan(): boolean {
+  public isVegan(): boolean {
     return false;
   }
 
