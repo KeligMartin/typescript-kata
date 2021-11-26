@@ -15,18 +15,32 @@ export default class Vehicle {
   // brrrrrrrrrrrrr si le vehicule est un camion
   // skrrrt skrrrt dans tout autre cas
   noise() {
+    switch (this.type) {
+      case VehicleType.Car:
+        return 'vrooooom'
+      case VehicleType.Moto:
+        return 'bep bep'
+      case VehicleType.Truck:
+        return 'brrrrrrrrrrrrr'
+      default:
+        return 'skrrrt skrrrt'
+    }
+    // if (!Object.values(VehicleType).includes(this.type)) {
+    //   return 'skrrrt skrrrt'
+    // }
+    
     return undefined
   }
 
   // Coder un callback qui renverra la methode noise précedemment codée
   // mais transformera la valeur de retour en majuscule
   myCb = () => {
-    return undefined
+    return this.noise().toUpperCase()
   }
 
   // Coder une méthode accelerate qui prend en paramètre un callback et renvoie la valeur de noise() concaténée au callback
   accelerate(cb: () => string) {
-    return undefined
+    return this.noise() + cb()
   }
 
 
