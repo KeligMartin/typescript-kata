@@ -1,4 +1,4 @@
 node_modules
 coverage
 .idea/
-pagege-lock.json
+package-lock.json
