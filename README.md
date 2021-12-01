@@ -1,4 +1,4 @@
-# Code Kata TypeScript Template
+  # Code Kata TypeScript Template
 
 This is a typescript kata to learn basics.
 
