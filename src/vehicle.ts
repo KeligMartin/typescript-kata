@@ -42,5 +42,4 @@ export default class Vehicle {
     return this.noise() + cb();
   }
 
-
 }
