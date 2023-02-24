@@ -5,8 +5,36 @@
 // ajouter une méthode swim() qui ne renvoie rien mais baisse le poids de 50.
 
 import Food from './food/food';
+import Animal from './animal.class';
+import Vegetable from './food/vegetable';
 
-export default class Hippopotamus {
+export default class Hippopotamus extends Animal {
+
+  constructor(name: string, weight: number = 0) {
+    super(name, weight);
+  }
+
+  eat(food: Food) {
+    if (food instanceof Vegetable) {
+      this.weight += 20;
+    } else {
+      return 'beurk';
+    }
+  }
 
   // CODER ICI
+  sleep() {
+    this.weight -= 20;
+    if (this.weight < 0) {
+      this.weight = 0;
+    }
+  }
+
+  swim() {
+    this.weight -= 50;
+    if (this.weight < 0) {
+      this.weight = 0;
+    }
+  }
 }
+

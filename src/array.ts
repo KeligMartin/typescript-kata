@@ -1,25 +1,43 @@
 export default class MyArray {
-
-  // Coder une méthode oddNumbers qui prend en paramètre un tableau d'entier, et renvoie un tableau uniquement composé
-  // des entiers impairs de ce dernier
-  oddNumbers(arr: number[]) {
-    return undefined
+  // Méthode oddNumbers
+  oddNumbers(arr: number[]): number[] {
+    return arr.filter((num) => num % 2 !== 0);
   }
 
-  // Coder une méthode sort qui renvoie le tableau passé en paramètre trié par ordre croissant
-  sort(arr: number[]) {
-    return undefined
+  // Méthode sort
+  sort(arr: number[]): number[] {
+    return arr.sort((a, b) => a - b);
   }
 
-  // Coder une méthode boringFunction qui renvoie true si les string du tableaux ont toutes la même longueur,
-  // ou renvoie "relou ta fonction" sinon
-  boringFunction(arr: string[]) {
-    return undefined
+  // Méthode boringFunction
+  boringFunction(arr: string[]): boolean | string {
+    const len = arr[0].length;
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i].length !== len) {
+        return 'relou ta fonction';
+      }
+    }
+    return true;
   }
 
-  // Coder une méthode optionalArray qui renvoie true si les 2 arrays d'entiers passés en paramètres sont égaux, false sinon
-  // Faire de même avec un 3e tableau passé en paramètre qui sera optionnel
-  optionalArray(a, b, c?) {
-    return undefined
+  // Méthode optionalArray
+  optionalArray(a: number[], b: number[], c?: number[]): boolean {
+    if (c) {
+      return this.arraysEqual(a, b) && this.arraysEqual(b, c);
+    }
+    return this.arraysEqual(a, b);
+  }
+
+  // Méthode utilitaire pour vérifier l'égalité de deux tableaux
+  private arraysEqual(a: number[], b: number[]): boolean {
+    if (a.length !== b.length) {
+      return false;
+    }
+    for (let i = 0; i < a.length; i++) {
+      if (a[i] !== b[i]) {
+        return false;
+      }
+    }
+    return true;
   }
 }
