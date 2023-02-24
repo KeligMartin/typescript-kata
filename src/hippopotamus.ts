@@ -4,9 +4,29 @@
 // l'hippopotame perd 20 de poids lorsqu'il dort
 // ajouter une méthode swim() qui ne renvoie rien mais baisse le poids de 50.
 
-import Food from './food/food';
+import Animal from './animal.class';
+import Meat from './food/meat';
+import Vegetable from './food/vegetable';
 
-export default class Hippopotamus {
+export default class Hippopotamus extends Animal {
+  public constructor(name: string, weight: number) {
+    super(name, weight);
+  }
 
-  // CODER ICI
+  eat(food: unknown): string {
+    if (food instanceof Vegetable) {
+      this.weight += 20;
+      return food.name.toString();
+    } else if (food instanceof Meat) {
+      return 'beurk';
+    }
+  }
+
+  sleep(): void {
+    this.weight < 20 ? (this.weight = 0) : (this.weight -= 20);
+  }
+
+  swim(): void {
+    this.weight < 50 ? (this.weight = 0) : (this.weight -= 50);
+  }
 }
