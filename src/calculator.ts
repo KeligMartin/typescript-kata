@@ -19,7 +19,7 @@ export default class MyCalculator {
     return b ? a / b : 0;
   }
 
-  // Coder une méthode power qui prend 2 nombres en paramètre et renvoie le premier élevé à la puissance de l'autre
+  // Coder une méthode power qui prend 2 nombres en paramètre et renvoie le premier élevé à la puissance de l'autre.
   power(a: number, b: number) {
     return a ** b;
   }
