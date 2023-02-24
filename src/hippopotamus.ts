@@ -6,7 +6,28 @@
 
 import Food from './food/food';
 import Animal from './animal.class';
-export default class Hippopotamus {
-  animal: Animal;
+export default class Hippopotamus extends Animal {
   
+  eat(foodType: Food) {
+    if (foodType.isVegan()) {
+      this.weight += 20;
+    } else {
+      return "beurk";
+    }
+  }
+  sleep(): void {
+    if(this.weight >= 20) {
+      this.weight -= 20;
+    } else {
+      this.weight = 0
+    }
+  }
+
+  swim(): void {
+    if(this.weight >= 50) {
+      this.weight -= 50;
+    } else {
+      this.weight = 0
+    }
+  }
 }

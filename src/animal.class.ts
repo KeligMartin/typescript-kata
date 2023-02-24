@@ -15,13 +15,16 @@ export default class Animal implements IAnimal {
     this.weight = weight;
   } 
 
-  eat(foodType: Food): string {
+  eat(foodType: Food): void {
     this.weight += 10;
-    return `${this.weight}`
   }
 
   sleep(): void {
-    this.weight -= 10;
+    if(this.weight > 0) {
+      this.weight -= 10;
+    } else {
+      this.weight = 0
+    }
   }
   toString(): string {
     return `Hey je m'apelle ${this.name}, je pèse ${this.weight}`;

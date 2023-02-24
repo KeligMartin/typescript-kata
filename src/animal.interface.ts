@@ -8,6 +8,6 @@ export default interface IAnimal {
   name: string;
   weight: number;
   toString(): string;
-  eat(foodType: Food): string;
+  eat(foodType: Food): void;
   sleep(): void
 }
