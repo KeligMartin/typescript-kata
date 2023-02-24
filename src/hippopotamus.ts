@@ -8,6 +8,5 @@ import Food from './food/food';
 import Animal from './animal.class';
 export default class Hippopotamus {
   animal: Animal;
-
   
 }
