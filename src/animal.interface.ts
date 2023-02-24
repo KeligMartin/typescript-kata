@@ -4,6 +4,12 @@
 
 import Food from './food/food';
 
-export default interface IAnimal {
-  // CODER ICI
+export default interface IAnimal extends Food {
+    eat(food: IFood): void;
+    sleep(): void;
+}
+
+// Définition de l'interface IFood
+interface IFood {
+    name: string;
 }

@@ -1,4 +1,5 @@
-export default class Food {
+export default // @ts-ignore
+class Food {
 
   name: string;
 
