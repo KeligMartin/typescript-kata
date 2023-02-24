@@ -24,6 +24,7 @@ export default class MyArray {
   optionalArray(a: number[], b: number[], c?: number[]): boolean {
     if (typeof c !== 'undefined') {
       return JSON.stringify(c) == JSON.stringify(a) && JSON.stringify(a) == JSON.stringify(b);
-    } else return JSON.stringify(a) == JSON.stringify(b);
+    }
+    return JSON.stringify(a) == JSON.stringify(b);
   }
 }

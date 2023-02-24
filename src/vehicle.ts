@@ -5,8 +5,8 @@ export default class Vehicle {
   name: string
 
   constructor(type: VehicleType, name: string) {
-    this.type = type
-    this.name = name
+    this.type = type;
+    this.name = name;
   }
 
   // Coder une méthode nois qui switchera sur le type du véhicule et renverra
@@ -35,8 +35,7 @@ export default class Vehicle {
 
   // Coder une méthode accelerate qui prend en paramètre un callback et renvoie la valeur de noise() concaténée au callback
   accelerate(cb: () => string) {
-    return this.noise() + this.myCb();
+    return this.noise() + cb();
   }
-
 
 }
