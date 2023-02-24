@@ -6,7 +6,23 @@ import Food from './food/food';
 // le poids d'un animal ne peut pas être négatif
 
 export default class Animal {
+  public weight: number;
+  public name: string;
 
-  // CODER ICI
+  constructor(name: string, weight: number) {
+    this.name = name;
+    this.weight = weight;
+  }
 
+  eat(food: Food): void | 'beurk' {
+    this.weight += 10;
+  }
+
+  sleep(): void {
+    if (this.weight < 10) {
+      this.weight = 0;
+      return;
+    }
+    this.weight -= 10;
+  }
 }
