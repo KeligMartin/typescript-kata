@@ -3,10 +3,32 @@
 // si l'aliment qu'il mange est de la viande, il pousse (renvoie) un cri de dégout : "beurk" et son poids n'augmente pas
 // l'hippopotame perd 20 de poids lorsqu'il dort
 // ajouter une méthode swim() qui ne renvoie rien mais baisse le poids de 50.
-
+import Animal from './animal.class';
+import Vegetable from './food/vegetable';
 import Food from './food/food';
 
-export default class Hippopotamus {
 
-  // CODER ICI
+export default class Hippopotamus extends Animal {
+  eat(food:Food): void | string {
+    if (food instanceof Vegetable) {
+      this.weight += 20;
+    }
+    else return "beurk"
+  };
+
+  sleep():void {
+    const newWeight =  this.weight -= 20;
+    if (newWeight >= 0) {
+      this.weight = newWeight;
+    }
+    else this.weight = 0
+  }
+
+  swim():void {
+    const newWeight = this.weight - 50;
+    if (newWeight >= 0) {
+      this.weight = newWeight;
+    }
+    else this.weight = 0
+  }
 }
