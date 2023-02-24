@@ -5,8 +5,9 @@
 // ajouter une méthode swim() qui ne renvoie rien mais baisse le poids de 50.
 
 import Food from './food/food';
-
+import Animal from './animal.class';
 export default class Hippopotamus {
+  animal: Animal;
 
-  // CODER ICI
+  
 }
