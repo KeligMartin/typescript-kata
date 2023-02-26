@@ -5,5 +5,6 @@
 import Food from './food/food';
 
 export default interface IAnimal {
-  // CODER ICI
+  eat<arg extends Food>(food:arg):void | string;
+	sleep():void;
 }
