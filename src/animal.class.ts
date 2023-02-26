@@ -1,6 +1,5 @@
 import Food from './food/food';
 import IAnimal from './animal.interface';
-import Vegetable from './food/vegetable';
 
 // Créer une class Animal qui implémente l'interface IAnimal
 // par défaut, la méthode eat augmente le poids de l'animal de 10

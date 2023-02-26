@@ -37,5 +37,5 @@ export default class MyArray {
 			}
 		}
 		return true;
-}
+	}
 }

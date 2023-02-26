@@ -27,7 +27,6 @@ export default class Vehicle {
 		}
 	}
 
-
   // Coder un callback qui renverra la methode noise précedemment codée
   // mais transformera la valeur de retour en majuscule
   myCb = () => {

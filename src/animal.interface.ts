@@ -3,7 +3,6 @@
 // sleep() ne prend pas d'argument et ne renvoie rien
 
 import Food from './food/food';
-
 export default interface IAnimal {
   eat<arg extends Food>(food:arg):void | string;
 	sleep():void;

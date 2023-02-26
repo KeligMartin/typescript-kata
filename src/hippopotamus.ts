@@ -6,9 +6,7 @@
 
 import Animal from './animal.class';
 import Food from './food/food';
-
 export default class Hippopotamus extends Animal {
-
 	eat(food: Food):string{
 		if (food.isVegan()) {
       this.weight = this.weight + 20;
