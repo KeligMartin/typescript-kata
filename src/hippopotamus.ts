@@ -9,14 +9,10 @@ import Meat from './food/meat';
 import Vegetable from './food/vegetable';
 
 export default class Hippopotamus extends Animal {
-  public constructor(name: string, weight: number) {
-    super(name, weight);
-  }
-
   eat(food: unknown): string {
     if (food instanceof Vegetable) {
       this.weight += 20;
-      return food.name.toString();
+      return food.name;
     } else if (food instanceof Meat) {
       return 'beurk';
     }
