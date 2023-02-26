@@ -13,8 +13,10 @@ describe("Array", () => {
       .toStrictEqual([1, 6, 13, 76, 245,343, 934, 1391, 1839]);
   })
 
+
+
   test("should return true if array items are the same length", () => {
-    expect(array.boringFunction(["hihi", "haha", "hoho"])).toBe(true)
+    expect(array.boringFunction(["hifi", "haha", "hoho"])).toBe(true)
   })
 
   test("should return relou ta fonction if array items are not the same length", () => {
