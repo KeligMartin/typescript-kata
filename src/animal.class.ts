@@ -25,7 +25,7 @@ export default class Animal implements IAnimal {
     if (this.weight > 10) {
       this.newWeight(-10);
     }
-  }
+  } 
 
   newWeight(muscle: number): void {
     if (this.weight + muscle >= 0) {
