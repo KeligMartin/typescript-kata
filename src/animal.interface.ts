@@ -6,4 +6,6 @@ import Food from './food/food';
 
 export default interface IAnimal {
   // CODER ICI
+  name:string;
+  weight:number;
 }
