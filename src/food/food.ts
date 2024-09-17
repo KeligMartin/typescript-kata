@@ -1,12 +1,11 @@
 export default class Food {
+  public name: string;
 
-  name: string;
-
-  constructor(name: string) {
+  public constructor(name: string) {
     this.name = name;
   }
 
-  isVegan(): boolean {
+  public isVegan(): boolean {
     return undefined;
   }
 }
